@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Insta = () => {m
+const Insta = () => {
   return (
     <div>
         <h1>insta</h1>
