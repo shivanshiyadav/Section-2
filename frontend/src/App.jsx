@@ -10,6 +10,8 @@ import Eventhandling from './components/Eventhandling';
 import Notfound from './components/notfound';
 import StateManagement from './components/StateManagement';
 import TodoApp from './components/TodoApp';
+import About from './components/About';
+import Insta from './components/Insta';
 
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
   <Route path='/State' element={ <StateManagement /> } />
   <Route path= '*' element={<Notfound /> }/>
   <Route path= '/Todo App' element={<TodoApp />}/>
+  <Route path= '/About' element={<About />}/>
+  <Route path= '/Insta ' element={<Insta />}/>
 
  
   

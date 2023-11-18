@@ -56,6 +56,12 @@ const Navbar = () => {
             </NavLink >
           
         </li>
+        <li className="nav-item">
+        <NavLink className="nav-link"  to="/Insta">
+            Insta
+            </NavLink >
+          
+        </li>
        
       </ul>
     </div>
