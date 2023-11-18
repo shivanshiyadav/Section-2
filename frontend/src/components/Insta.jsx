@@ -10,7 +10,7 @@ const Insta = () => {
             <div className="likes" onClick={(e) => {console.log(e.target.value)}}></div>
 
             </div>
-        </div>
+        </div> 
         
     </div>
   )
