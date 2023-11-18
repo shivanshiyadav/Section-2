@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Insta = () => {
-  return (;
+  return (
     <div>
         <h1>insta</h1>
         <div className='container'>
