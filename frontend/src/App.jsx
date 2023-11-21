@@ -12,6 +12,7 @@ import StateManagement from './components/StateManagement';
 import TodoApp from './components/TodoApp';
 import About from './components/About';
 import Insta from './components/Insta';
+import ListPost from './components/ListPost';
 
 
 const App = () => {
@@ -26,10 +27,12 @@ const App = () => {
   <Route path= '/signup' element={<Signup />}/>
   <Route path='/Eventhandling' element={ <Eventhandling /> } />
   <Route path='/State' element={ <StateManagement /> } />
-  <Route path= '*' element={<Notfound /> }/>
+ 
   <Route path= '/Todo App' element={<TodoApp />}/>
   <Route path= '/About' element={<About />}/>
   <Route path= '/Insta' element={<Insta />}/>
+  <Route path= '/ListPost' element={<ListPost />}/>
+  <Route path= '*' element={<Notfound /> }/>
   
 
  

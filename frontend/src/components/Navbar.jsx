@@ -68,6 +68,12 @@ const Navbar = () => {
             </NavLink >
           
         </li>
+        <li className="nav-item">
+        <NavLink className="nav-link"  to="/ListPost">
+       ListPost
+            </NavLink >
+          
+        </li>
        
       </ul>
     </div>
