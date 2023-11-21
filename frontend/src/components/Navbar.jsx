@@ -62,6 +62,12 @@ const Navbar = () => {
             </NavLink >
           
         </li>
+        <li className="nav-item">
+        <NavLink className="nav-link"  to="/State">
+        StateManagement
+            </NavLink >
+          
+        </li>
        
       </ul>
     </div>

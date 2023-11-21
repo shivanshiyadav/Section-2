@@ -28,8 +28,9 @@ const TodoApp = () => {
                 </div>
                 <div className='card-body'>
                     {todolist.map( ( task ) => { return <div className='d-flex justify-content-between p-3'>
-                        <p>{task}</p>
+                        <p>{task.text}</p>
                         <button className='btn btn-danger'>Delete</button>
+                    <button className='btn btn-primary'>Complete</button>
                     </div> } ) }
                 </div>
             </div>

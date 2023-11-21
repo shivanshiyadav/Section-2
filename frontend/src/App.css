@@ -74,7 +74,10 @@ button{
  border-radius: 20px;
   margin: 0px;
 }
-.btn{
+.back{
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px;
   color: beige;
   font-weight: 500;
   box-shadow: 0px 0px 10px 3px rgba(11, 85, 145, 0.767);
@@ -202,4 +205,33 @@ span{
 }
 .not{
   background-color: #74c2da;
+}
+.flower{
+  height: 330px;
+  width: 400px;
+  text-align: center;
+  padding: 25px;
+  padding-left: 0px;
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 500px;
+  width: 600px;
+  padding: 6px;
+  margin-left: 50px;
+}
+.like{
+  
+  margin-left: 0px;
+  padding:0px;
+  background-color: white;
+  width: 50%;
+  font-size: xx-large;
+
+}
+.card{
+  margin: 25px;
+  padding: 5px;
+  width: 400px;
 }

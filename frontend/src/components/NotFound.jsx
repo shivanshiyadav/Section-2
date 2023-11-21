@@ -12,7 +12,7 @@ const NotFound = () => {
     <video src={videoBg} autoPlay loop muted  width={800}  > </video>
     <p className='found'>404 - Page not Found</p>
         
-        <Link className='btn btn-info  mt-10 p-2' to="/">Back to Homepage</Link>
+        <Link className='back' to="/">Back to Homepage</Link>
     </div>
     </div>
     

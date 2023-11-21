@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-<Nav_bar />
+      <Nav_bar />
 
 <Routes>
   <Route path= '/' element={<Home /> }/>
@@ -29,7 +29,8 @@ const App = () => {
   <Route path= '*' element={<Notfound /> }/>
   <Route path= '/Todo App' element={<TodoApp />}/>
   <Route path= '/About' element={<About />}/>
-  <Route path= '/Insta ' element={<Insta />}/>
+  <Route path= '/Insta' element={<Insta />}/>
+  
 
  
   
