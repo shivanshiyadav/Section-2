@@ -13,11 +13,13 @@ import TodoApp from './components/TodoApp';
 import About from './components/About';
 import Insta from './components/Insta';
 import ListPost from './components/ListPost';
+import {Toaster} from 'react-hot-toast'
 
 
 const App = () => {
   return (
     <div>
+      <Toaster position = 'top-center'/>
       <BrowserRouter>
       <Nav_bar />
 
