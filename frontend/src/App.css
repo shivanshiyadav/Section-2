@@ -29,9 +29,9 @@
   width:380px ;
   margin-bottom: 10px;
 }
-button{
+.btn-btn{
   font-weight: 100;
-  margin: 10px;
+  margin: 1px;
   font-size:small;
   padding: 3px;
   border-radius: 8px;
