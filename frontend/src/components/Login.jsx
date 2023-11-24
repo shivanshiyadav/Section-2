@@ -24,10 +24,9 @@ const Login = () => {
     <input className='input' type="text"  />
    <label htmlFor="Password"> Forgot Password</label>
 <input type="radio" />
-    <label htmlFor="Password"> Remember me</label>
-<input type="radio" />
+    
 <div>
-<button> Login</button>
+<button className='btn-btn-primary'> Login</button>
 <h5 className=' do'>Don't have an account? <span className='reg'>Register</span>  </h5>
 
 </div>
