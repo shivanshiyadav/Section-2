@@ -14,6 +14,7 @@ import About from './components/About';
 import Insta from './components/Insta';
 import ListPost from './components/ListPost';
 import {Toaster} from 'react-hot-toast'
+import Dev_to from './components/Dev_to';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
       <Toaster position = 'top-center'/>
       <BrowserRouter>
       <Nav_bar />
+      
 
 <Routes>
   <Route path= '/' element={<Home /> }/>
@@ -35,6 +37,7 @@ const App = () => {
   <Route path= '/Insta' element={<Insta />}/>
   <Route path= '/ListPost' element={<ListPost />}/>
   <Route path= '*' element={<Notfound /> }/>
+  <Route path= '/Dev_to'element={<Dev_to /> }/>
   
 
  
