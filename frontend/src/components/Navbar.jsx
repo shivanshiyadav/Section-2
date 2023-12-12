@@ -74,6 +74,12 @@ const Navbar = () => {
             </NavLink >
           
         </li>
+        <li className="nav-item">
+        <NavLink className="nav-link"  to="/ManageUser">
+        ManageUser
+            </NavLink >
+          
+        </li>
        
       </ul>
     </div>

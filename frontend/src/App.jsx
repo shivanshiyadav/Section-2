@@ -15,11 +15,14 @@ import Insta from './components/Insta';
 import ListPost from './components/ListPost';
 import {Toaster} from 'react-hot-toast'
 import Dev_to from './components/Dev_to';
+import { SnackbarProvider } from 'notistack';
+import ManageUser from './ManageUser';
 
 
 const App = () => {
   return (
     <div>
+      <SnackbarProvider anchorOrigin={{horizontal: 'right',vertical:'top'}}maxSnack={3}> 
       <Toaster position = 'top-center'/>
       <BrowserRouter>
       <Nav_bar />
@@ -38,13 +41,14 @@ const App = () => {
   <Route path= '/ListPost' element={<ListPost />}/>
   <Route path= '*' element={<Notfound /> }/>
   <Route path= '/Dev_to'element={<Dev_to /> }/>
+  <Route path= '/ManageUser'element={<ManageUser /> }/>
   
 
  
   
 </Routes>
    </BrowserRouter>
-   
+   </SnackbarProvider>
     </div>
   )
 }

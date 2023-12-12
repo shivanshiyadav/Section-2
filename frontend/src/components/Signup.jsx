@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import { enqueueSnackbar } from 'notistack';
 import React from 'react'
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
@@ -42,10 +43,17 @@ const SignUp = () => {
       });
 
       console.log(response.status);
+      console.log(response.statusText);
+      if(response.status ===200){
+        enqueueSnackbar('Registered Sucessfully',{variant:'sucess'});
+      }
+      else{
+        enqueueSnackbar('Something went Wrong',{variant:'sucess'});
+      }
     
       
-      resetForm();
-      toast.success('Form Submitted Successfully');
+      // resetForm();
+      // toast.success('Form Submitted Successfully');
     },
     validationSchema: SignupSchema
   });
