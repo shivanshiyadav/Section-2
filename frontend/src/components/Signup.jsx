@@ -29,9 +29,21 @@ const SignUp = () => {
       password: '',
       confirm:'',
     },
-    onSubmit: (values, { resetForm }) => {
-      alert(JSON.stringify(values));
+    onSubmit: async (values, { resetForm }) => {
+      // alert(JSON.stringify(values));
       console.log(values);
+      //send  request to backend /REST API 
+     const response = await fetch('http://localhost:5000/user/add', {
+        method :'POST',
+        body :JSON.stringify(values),
+        headers:{
+          'Content-type': 'application/json'
+        }
+      });
+
+      console.log(response.status);
+    
+      
       resetForm();
       toast.success('Form Submitted Successfully');
     },
