@@ -11,18 +11,7 @@
 .title{
   text-align: center;
 }
-.child2{
-  
-  /* border: 10px solid black;
-  border-radius: 20px;
-  border-color: rgb(92, 43, 226); */
 
- box-sizing: border-box;
- font-size: larger;
- margin: 20px;
- padding: 20px;
- width: 100vh;
-}
 .input{
   padding: 5px;
   text-align: justify;
@@ -262,4 +251,28 @@ padding-top: 40px;
   height: 650px;
   background-size: cover;
 background-repeat: no-repeat;
+}
+.bg{
+  background-image: linear-gradient(#daa9f8,rgb(238, 167, 245),rgb(243, 149, 211));
+}
+.child1{
+
+  margin: 20px;
+  padding: 80px;
+  text-align: center;
+  height: 10px;
+  width: 10px;
+
+}
+.child2{
+
+   border: 10px solid black;
+  border-radius: 20px;
+  border-color: rgb(92, 43, 226);
+ box-sizing: border-box;
+ font-size: larger;
+ margin: 20px;
+ padding: 20px;
+ width: 100px;
+ 
 }

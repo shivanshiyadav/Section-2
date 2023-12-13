@@ -1,10 +1,11 @@
 import React from 'react'
 const Login = () => {
   return (
-<div className="body">
+<div className="bg">
 <div className='grid'>
       <div className='child1'>
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" alt="" />
+     
+      <img src="https://static.vecteezy.com/system/resources/previews/007/606/352/non_2x/woman-working-with-laptop-vector.jpg" alt="" />
 
       </div> 
  
@@ -22,11 +23,12 @@ const Login = () => {
     <input className='input' type="email" />
     <label htmlFor="name"> Password: </label>
     <input className='input' type="text"  />
-   <label htmlFor="Password"> Forgot Password</label>
-<input type="radio" />
+   {/* <label htmlFor="Password"> Forgot Password</label>
+<input type="radio" /> */}
     
 <div>
-<button className='btn-btn-primary'> Login</button>
+<button type="button" class="btn btn-primary">Login</button>
+{/* <button className='btn-btn-sucess'> Login</button> */}
 <h5 className=' do'>Don't have an account? <span className='reg'>Register</span>  </h5>
 
 </div>
