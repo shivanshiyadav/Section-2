@@ -235,3 +235,20 @@ span{
   padding: 5px;
   width: 400px;
 }
+/* .home{
+  text-align: center;
+  font-size: larger;
+  font-weight: 900;
+  /* padding:150px; */
+  /* font-variant: small-caps; */
+} */
+.container{
+ 
+
+}
+.img{
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+background-repeat: no-repeat;
+}
