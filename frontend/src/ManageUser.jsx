@@ -30,7 +30,7 @@ const ManageUser = () => {
           <td>{user.location}</td>
           <td>{user.password}</td>
           <td>
-            <button onClick={() => { deleteUser(user._id) }} className='btn btn-danger'>Delete User</button>
+            < button onClick={() => { deleteUser(user._id) }} className='btn btn-danger'>Delete User</>
           </td>
         </tr>
       })
