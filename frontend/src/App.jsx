@@ -16,8 +16,10 @@ import ListPost from './components/ListPost';
 import {Toaster} from 'react-hot-toast'
 import Dev_to from './components/Dev_to';
 import { SnackbarProvider } from 'notistack';
-import ManageUser from './ManageUser';
-import UdateUser from './components/UdateUser';
+
+// import UdateUser from './components/UpdateUser';
+import UpdateUser from './components/UpdateUser';
+import ManageUser from './components/ManageUser';
 
 
 const App = () => {
@@ -42,8 +44,8 @@ const App = () => {
   <Route path= '/ListPost' element={<ListPost />}/>
   <Route path= '*' element={<Notfound /> }/>
   <Route path= '/Dev_to'element={<Dev_to /> }/>
-  <Route path= '/ManageUser'element={<ManageUser /> }/>
-  <Route path= '/UdateUser'element={<UdateUser /> }/>
+  <Route path='Manage' element={<ManageUser/>}/>
+  <Route path='/Updateuser/:id' element={<UpdateUser />}/>
   
 
  

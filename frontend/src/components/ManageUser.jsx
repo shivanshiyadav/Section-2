@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const ManageUser = () => {
 
@@ -43,6 +44,9 @@ const ManageUser = () => {
           <td>
              <button onClick={() => { deleteUser(user._id) }} className='btn btn-danger'>Delete User</button>
           </td>
+          <td>
+             <Link to ={'/updateuser/'+user._id} className='btn btn-primary'>Update</Link>
+          </td>
         </tr>
       })
     }
@@ -60,6 +64,7 @@ const ManageUser = () => {
               <th>LOCATION</th>
               <th>PASSWORD</th>
               <th>Delete</th>
+              <th colSpan={2}>Action</th>
 
             </tr>
           </thead>
