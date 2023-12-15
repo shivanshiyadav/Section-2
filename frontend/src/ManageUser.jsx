@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
 
 const ManageUser = () => {
 
@@ -17,8 +18,17 @@ const ManageUser = () => {
     getUserData();
 
   }, []);
-  const deleteUser = (id) => {
+
+  const deleteUser =  async(id) => {
     console.log(id);
+
+    const res = await fetch('http://localhost:5000/user/delete/'+id, {
+      method:'DELETE',
+
+    });
+    console.log(res.status);
+    getUserData();
+    toast.success('User Delete Sucessfully');
   }
   const displayUserData = () => {
     if (userArray.length) {
@@ -29,6 +39,7 @@ const ManageUser = () => {
           <td>{user.email}</td>
           <td>{user.location}</td>
           <td>{user.password}</td>
+          <td>{user.delete}</td>
           <td>
              <button onClick={() => { deleteUser(user._id) }} className='btn btn-danger'>Delete User</button>
           </td>
@@ -48,6 +59,7 @@ const ManageUser = () => {
               <th>EMAIL</th>
               <th>LOCATION</th>
               <th>PASSWORD</th>
+              <th>Delete</th>
 
             </tr>
           </thead>

@@ -17,6 +17,7 @@ import {Toaster} from 'react-hot-toast'
 import Dev_to from './components/Dev_to';
 import { SnackbarProvider } from 'notistack';
 import ManageUser from './ManageUser';
+import UdateUser from './components/UdateUser';
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
   <Route path= '*' element={<Notfound /> }/>
   <Route path= '/Dev_to'element={<Dev_to /> }/>
   <Route path= '/ManageUser'element={<ManageUser /> }/>
+  <Route path= '/UdateUser'element={<UdateUser /> }/>
   
 
  
