@@ -5,7 +5,7 @@ const Login = () => {
 <div className='grid'>
       <div className='child1'>
      
-      <img src="https://static.vecteezy.com/system/resources/previews/007/606/352/non_2x/woman-working-with-laptop-vector.jpg" alt="" />
+      <img src="https://img.freepik.com/premium-vector/office-worker-desktop-cartoon-illustration-young-man-with-laptop_603999-1.jpg?size=626&ext=jpg&ga=GA1.1.1697079592.1681836430&semt=ais" alt="" />
 
       </div> 
  
@@ -19,8 +19,10 @@ const Login = () => {
     <h1 className='title' >Login</h1>
     <label htmlFor="name"> Name: </label>
     <input className='input' type="text" />
+    <div>
     <label htmlFor="name"> Email: </label>
     <input className='input' type="email" />
+      </div>
     <label htmlFor="name"> Password: </label>
     <input className='input' type="text"  />
    {/* <label htmlFor="Password"> Forgot Password</label>
