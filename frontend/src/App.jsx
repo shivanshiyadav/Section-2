@@ -18,8 +18,8 @@ import Dev_to from './components/Dev_to';
 import { SnackbarProvider } from 'notistack';
 
 // import UdateUser from './components/UpdateUser';
-import UpdateUser from './components/UpdateUser';
 import ManageUser from './components/ManageUser';
+import UpdateUser from './components/UpdateUser';
 
 
 const App = () => {
@@ -44,8 +44,8 @@ const App = () => {
   <Route path= '/ListPost' element={<ListPost />}/>
   <Route path= '*' element={<Notfound /> }/>
   <Route path= '/Dev_to'element={<Dev_to /> }/>
-  <Route path='Manage' element={<ManageUser/>}/>
-  <Route path='/Updateuser/:id' element={<UpdateUser />}/>
+  <Route path='/manage' element={ <ManageUser /> } />
+   <Route path='/updateuser/:id' element={ <UpdateUser /> } />
   
 
  
