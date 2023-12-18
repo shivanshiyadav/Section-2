@@ -1,6 +1,6 @@
 
 .body{
-  
+
   margin: 50px 10px 0px 70px;
 }
 .grid{
@@ -172,10 +172,11 @@ span{
  color: aliceblue;
 }
 .grid2{
+  background-color: #000;
   margin: 10px;
   padding: 10px;
   display: grid;
- grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
 }
 .a{
   font-size: xx-large;
