@@ -1,33 +1,44 @@
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
-import toast from 'react-hot-toast';
+// import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 
 const LoginSchema = Yup.object().shape({
-
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string().required('Required')
+  name: Yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string()
+    .email('Invalid email')
+    .required('Required'),
+  password: Yup.string()
+    .min(5,'Too Short!')
+    .required('Required')
+    .matches(/[0-9]/, 'Number is Required')
+    .matches(/[a-z]/, 'LowerCase is Required')
+    .matches(/[A-Z]/, 'UpperCase is Required')
+    .matches(/[^\w]/, 'Special Character is Required'),
+    confirm: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords Must Match !')
+    .required('Required')
 });
 
 const Login = () => {
 
   const loginForm = useFormik({
     initialValues: {
-     
       email: '',
-      password: ''
-      
+      password: '',
     },
     onSubmit: async (values, { resetForm }) => {
       // alert(JSON.stringify(values));
       console.log(values);
 
-      // send request to backend/REST API
-      const response = await fetch('http://localhost:5000/user/add', {
+      //send req to backend/Rest API
+      const response = await fetch('http://localhost:5000/user/authenticate', {
         method : 'POST',
         body : JSON.stringify(values),
-        headers: {
+        headers : {
           'Content-Type' : 'application/json'
         }
       });
@@ -35,16 +46,16 @@ const Login = () => {
       console.log(response.status);
       console.log(response.statusText);
 
-      if(response.status === 200){
-        enqueueSnackbar('Registered Successfully', { variant: 'success' });
-      }else if(response.status ==401){
-        enqueueSnackbar('Something went wrong', { variant: 'error' });
-      }else{
-        enqueueSnackbar('Something went wrong', { variant: 'error' });
+      if (response.status === 200) {
+        enqueueSnackbar('LoggedIn Successfully', {variant: 'success'});
+      }
+      else if(response.status === 401){
+        enqueueSnackbar('Email or Password is Incorrect', {variant: 'error'});
+      }
+      else{
+        enqueueSnackbar('Something Went Wrong', {variant: 'error'});
       }
 
-      // resetForm();
-      // toast.success('Form Submitted Successfully');
     },
     validationSchema: LoginSchema
   });
@@ -52,41 +63,48 @@ const Login = () => {
 
 
   return (
-    <div className='login-bg'>
-      <div className="container">
-
-      <div className="row align-items-center vh-100 gx-5">
-        <div className="col-md-7">
-          <h1 className='display-1 fw-bold text-white'>Bring your Ideas to Reality with Us</h1>
-          <p className='fs-5 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quas cum quaerat voluptatum delectus tenetur facilis maiores, esse deleniti ad nulla voluptates similique vero eius eaque! Molestiae molestias nulla natus quam minima veniam aliquam ab officia perferendis animi adipisci, alias quae veritatis repudiandae rerum aut minus distinctio, deserunt sapiente provident?</p>
-        </div>
-        <div className="col-md-5 py-5">
-          <div className="card shadow">
-            <div className="card-body p-5">
-              <h3 className='my-3 text-center'>Amazon</h3>
-              <h5 className='text-center text-muted'>login Form</h5>
-
-              <form onSubmit={loginForm.handleSubmit} >
-
-                <label htmlFor="email">Email Address</label>
-                <span className='text-danger ms-3'>{loginForm.touched.email && loginForm.errors.email}</span>
-                <input type="text" id='email' onChange={loginForm.handleChange} value={loginForm.values.email} className='form-control mb-4' />
-
-                <label htmlFor="password">Password</label>
-                <span className='text-danger ms-3'>{loginForm.touched.password && loginForm.errors.password}</span>
-                <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mb-4' />
-
-                <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
-
-              </form>
-
+    <div style={{ fontFamily: 'Montserrat' }}>
+      <div className='container text-start mt-4'>
+        <div className='row' >
+          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#391b7f', color: 'white'}}>
+            <div className='card display-1 border-0 '>
+              <div className='card-body text-white' style={{backgroundColor: '#391b7f', }}>
+                Welcome
+                <br />
+                Back !!
+              </div>
             </div>
+          </div>
+          <div className='col'style={{backgroundColor: '#d9c0c1'}}>
+            <div className="card border-0" style={{backgroundColor: '#d9c0c1'}}>
+              <div className="card-body" >
+
+                <h3 className='my-3 text-center display-5 fw-bold'>Login</h3>
+
+                <p className='text-center my-4 fw-medium'>Welcome Back..!! Please login into your account.</p>
+
+                <form onSubmit={loginForm.handleSubmit}>
+
+                  <label className='fw-medium' htmlFor="email">Email Address</label>
+                  <span className='text-danger ms-3'>{loginForm.touched.email && loginForm.errors.email}</span>
+                  <input type="text" id='email' onChange={loginForm.handleChange} value={loginForm.values.email} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
+
+                  <label className='fw-medium' htmlFor="password">Password</label>
+                  <span className='text-danger ms-3'>{loginForm.touched.password && loginForm.errors.password}</span>
+                  <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
+
+                  <button type='submit' className='btn btn-primary w-100 my-4 border-0' style={{backgroundColor: '#391b7f', color:'white'}}>Submit</button>
+
+                </form>
+
+                <p className='fw-medium mb-5 mt-2'>Already a User ? <a href="Login" style={{color:'#391b7f'}}>Login</a></p>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-      </div>
-
-
     </div>
   )
 }
