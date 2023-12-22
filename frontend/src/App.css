@@ -204,14 +204,7 @@ span{
   padding: 25px;
   padding-left: 0px;
 }
-/* .container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 500px;
-  width: 600px;
-  padding: 6px;
-  margin-left: 50px; */
-}
+
 .like{
   
   margin-left: 0px;
@@ -350,4 +343,9 @@ h1 {
   100% {
     transform:translateX(25%);
   }
+}
+.background{
+
+background-image:linear-gradient('0deg #FFD3A5 , #FD6585'),url("https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
 }

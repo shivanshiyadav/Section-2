@@ -63,6 +63,8 @@ const Login = () => {
 
 
   return (
+    <div className='background'> 
+
     <div style={{ fontFamily: 'Montserrat' }}>
       <div className='container text-start mt-4'>
         <div className='row' >
@@ -105,6 +107,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
