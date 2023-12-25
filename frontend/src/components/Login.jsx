@@ -64,10 +64,8 @@ const Login = () => {
 
   return (
     <div className='background'> 
-
-    <div className="container">
-      
-    </div>
+ 
+ 
      
     </div>
   )
