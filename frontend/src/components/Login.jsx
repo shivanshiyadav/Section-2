@@ -74,27 +74,6 @@ const Login = () => {
   return (
     
  
- 
-     
-  //  <div>
-    
-  //   <div className="container" id='container'>
-  //     <div className="form-container log-in-container">
-  //     ...............
-  //   ...............
-  //   ...............
-  //     </div>
-      
-  //   <div className="oberlay-container">
-  //     <div className="overlay">
-  //     ...............
-  //   ...............
-  //   ...............
-  //     </div>
-  //   </div>
-  // </div>
-  //  </div>
-  
   <div class="container" id="container">
 		<div class="form-container log-in-container">
 			<form action="#">
