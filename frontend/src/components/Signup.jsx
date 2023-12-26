@@ -80,34 +80,39 @@ const SignUp = () => {
 					<i class="login__icon fas fa-lock"></i>
 					<input type="password" class="login__input" placeholder="Password"/>
 				</div>
-				<button class="button login__submit">
-					<span class="button__text">SigIn Now</span>
-					<i class="button__icon fas fa-chevron-right"></i>
-				</button>				
+							
 			</form> */}
       <form onSubmit={signupForm.handleSubmit} className='login2'>
       <h1>Sign In Now</h1>
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-<label className='fw-medium' htmlFor="name">Name</label>
-<span className='text-danger ms-3'>{signupForm.touched.name && signupForm.errors.name}</span>
-<input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
+      <div class="login__field">
+					
+<label className='login__input' htmlFor="name">Name </label>
+<span >{signupForm.touched.name && signupForm.errors.name}</span>
+<input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='login__input' />
 </div>
-<label className='fw-medium' htmlFor="email">Email Address</label>
-<span className='text-danger ms-3'>{signupForm.touched.email && signupForm.errors.email}</span>
-<input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
+<div class="login__field">
+<label className='login__input' htmlFor="email">Email Address</label>
+<span >{signupForm.touched.email && signupForm.errors.email}</span>
+<input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='login__input' />
+</div>
+<div class="login__field">
 
-<label className='fw-medium' htmlFor="password">Password</label>
-<span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
-<input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
-
-<label className='fw-medium' htmlFor="confirm">Confirm Password</label>
-<span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
-<input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' style={{borderWidth:'2px' ,borderColor: '#391b7f'}}/>
-
-<button type='submit' className='btn btn-primary w-100 my-4 border-0' style={{backgroundColor: '#391b7f', color:'white'}}>Submit</button>
-
+<label className='login__input' htmlFor="password">Password <i class="login__icon fas fa-lock"></i></label>
+<span >{signupForm.touched.password && signupForm.errors.password}</span>
+<input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='login__input'/>
+</div>
+<div class="login__field">
+<label className='login__input' htmlFor="confirm">Confirm Password</label>
+<span >{signupForm.touched.confirm && signupForm.errors.confirm}</span>
+<input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='login__input' />
+</div>
+<button class="button login__submit">
+					<span class="button__text">SigIn Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>	
 </form>
+
+
 
 			<div class="social-login">
 				<h3>signIn via</h3>

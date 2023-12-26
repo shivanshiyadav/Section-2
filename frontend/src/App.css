@@ -487,7 +487,7 @@ input {
 .screen__content {
 	z-index: 1;
 	position: relative;	
-	height: 100%;
+	height: 300px;
 	width: 800px;
 }
 
@@ -545,12 +545,13 @@ input {
 
 .login2 {
 	width: 420px;
-	padding: 30px;
-	padding-top: 156px;
+	padding: 0px;
+	padding-top: 280px;
+	padding-bottom: 0px;
 }
 
 .login__field {
-	padding: 20px 0px;	
+	padding: 0px 0px;	
 	position: relative;	
 }
 
@@ -565,7 +566,7 @@ input {
 	border-bottom: 2px solid #D1D1D4;
 	background: none;
 	padding: 10px;
-	padding-left: 24px;
+	padding-left: 4px;
 	font-weight: 700;
 	width: 95%;
 	transition: .2s;
@@ -601,12 +602,14 @@ input {
 .login__submit:hover {
 	border-color: #6A679E;
 	outline: none;
+	
 }
 
 .button__icon {
 	font-size: 24px;
 	margin-left: auto;
 	color: #7875B5;
+	
 }
 
 .social-login {	
