@@ -63,12 +63,53 @@ const Login = () => {
 
 
   return (
-    <div className='background'> 
+    
  
  
      
-    </div>
-  )
+  //  <div>
+    
+  //   <div className="container" id='container'>
+  //     <div className="form-container log-in-container">
+  //     ...............
+  //   ...............
+  //   ...............
+  //     </div>
+      
+  //   <div className="oberlay-container">
+  //     <div className="overlay">
+  //     ...............
+  //   ...............
+  //   ...............
+  //     </div>
+  //   </div>
+  // </div>
+  //  </div>
+  
+  <div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form action="#">
+				<h1>Login</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
+					<a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
+				</div>
+				<span>or use your account</span>
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<a href="#">Forgot your password?</a>
+				<button>Log In</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Welcome Back!!</h1>
+					<p>To keep Connection with us please Login with your Personal Information </p>
+				</div>
+			</div>
+		</div>
+	</div>)
 }
 
 export default Login;
