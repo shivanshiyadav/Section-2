@@ -64,53 +64,45 @@ const SignUp = () => {
 
 
   return (
-    <div style={{ fontFamily: 'Montserrat' }}>
-      <div className='container text-start mt-4'>
-        <div className='row'>
-          <div className='col d-flex align-items-center justify-content-center' style={{backgroundColor: '#5627CC', color: 'white'}}>
-            <div className='card display-1 border-0 '>
-              <div className='card-body '>
-                Welcome
-                <br />
-                Back !!
-              </div>
-            </div>
-          </div>
-          <div className='col'>
-            <div className="card">
-              <div className="card-body">
-                <h3 className='my-3 text-center'>Brand Logo</h3>
-                <h5 className='text-center text-muted'>Signup Form</h5>
-
-                <form onSubmit={signupForm.handleSubmit}>
-
-                  <label htmlFor="name">Name</label>
-                  <span className='text-danger ms-3'>{signupForm.touched.name && signupForm.errors.name}</span>
-                  <input type="text" id='name' onChange={signupForm.handleChange} value={signupForm.values.name} className='form-control mb-4' />
-
-                  <label htmlFor="email">Email Address</label>
-                  <span className='text-danger ms-3'>{signupForm.touched.email && signupForm.errors.email}</span>
-                  <input type="text" id='email' onChange={signupForm.handleChange} value={signupForm.values.email} className='form-control mb-4' />
-
-                  <label htmlFor="password">Password</label>
-                  <span className='text-danger ms-3'>{signupForm.touched.password && signupForm.errors.password}</span>
-                  <input type="password" id='password' onChange={signupForm.handleChange} value={signupForm.values.password} className='form-control mb-4' />
-
-                  <label htmlFor="confirm">Confirm Password</label>
-                  <span className='text-danger ms-3'>{signupForm.touched.confirm && signupForm.errors.confirm}</span>
-                  <input type="password" id='confirm' onChange={signupForm.handleChange} value={signupForm.values.confirm} className='form-control mb-4' />
-
-                  <button type='submit' className='btn btn-primary w-100 my-4'>Submit</button>
-
-                </form>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
+    <div>
+    <div class="containerw">
+      
+	<div class="screen">
+		<div class="screen__content">
+   
+			<form class="login2">
+      <h1>Sign In Now</h1>
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="User name / Email"/>
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Password"/>
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">SigIn Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>signIn via</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+</div>
   )
 }
 

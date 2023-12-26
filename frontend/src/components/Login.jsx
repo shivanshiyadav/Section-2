@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 // import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 
@@ -25,6 +26,8 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
 
+  const navigate =useNavigate();
+
   const loginForm = useFormik({
     initialValues: {
       email: '',
@@ -48,6 +51,12 @@ const Login = () => {
 
       if (response.status === 200) {
         enqueueSnackbar('LoggedIn Successfully', {variant: 'success'});
+        const data = await response.json();
+        console.log(data);
+
+        //to save user data in session 
+        sessionStorage.setItem('user',JSON.stringify(data));
+        navigate('/manage');
       }
       else if(response.status === 401){
         enqueueSnackbar('Email or Password is Incorrect', {variant: 'error'});

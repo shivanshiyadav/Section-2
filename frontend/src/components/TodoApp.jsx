@@ -31,7 +31,7 @@ const TodoApp = () => {
 
   return (
     <div>
-        <div className='container'>
+        <div className='containerx'>
             <h1 className='text-center fw-bold'>ToDo App</h1>
             <hr />
 

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+  const [currentUser,setCurrentUser] =useState();
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary ">
   <div className="container-fluid">
