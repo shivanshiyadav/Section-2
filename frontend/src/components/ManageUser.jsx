@@ -8,46 +8,46 @@ const ManageUser = () => {
 
     const getUserData = async () => {
 
-        const res = await fetch('http://localhost:5000/user/getall');
+        const res = await fetch ('http://localhost:5000/user/getall');
         console.log(res.status);
 
         const data = await res.json();
         console.table(data);
 
         setUserArray(data);
+
     }
-    
+
     useEffect(() => {
-      getUserData();
+        getUserData();
     }, []);
 
     const deleteUser = async (id) => {
       console.log(id);
 
-      const res = await fetch('http://localhost:5000/user/delete/'+id, {
+      const res = await fetch ('http://localhost:5000/user/delete/'+id,{
         method: 'DELETE',
       });
 
       console.log(res.status);
       getUserData();
       toast.success('User Deleted Successfully');
-
     }
-    
-    const displayUsersData = () => {
-      if(userArray.length){
+
+    const displayUserData = () => {
+      if (userArray.length){
         return userArray.map((user) => {
-          return <tr>
+          return <tr key={user._id}>
             <td>{user._id}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>{user.location}</td>
             <td>{user.password}</td>
             <td>
-              <button onClick={ () => { deleteUser(user._id) } } className='btn btn-danger'>Delete User</button>
+              <button onClick={ () => {deleteUser(user._id)}} className='btn btn-danger'>Delete</button>
             </td>
             <td>
-              <Link to={'/updateuser/'+user._id} className='btn btn-primary'>Update User</Link>
+              <Link to={'/update/'+user._id} className='btn btn-success'> Update </Link>
             </td>
           </tr>
         })
@@ -62,23 +62,22 @@ const ManageUser = () => {
 
         <table className='table table-dark'>
           <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Location</th>
-                <th>Password</th>
-                <th colSpan={2}>Actions</th>
-              </tr>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Location</th>
+              <th>Password</th>
+              <th colSpan={2}>Actions</th>
+            </tr>
           </thead>
           <tbody>
-              {displayUsersData()}
+            {displayUserData()}
           </tbody>
         </table>
-
       </div>
     </div>
   )
 }
 
-export default ManageUser
+export default ManageUser;
