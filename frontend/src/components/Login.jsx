@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 // import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import SignUp from './SignUp';
+import useAppContext from '../../AppContext';
 
 const LoginSchema = Yup.object().shape({
   name: Yup.string()
@@ -28,6 +29,7 @@ const LoginSchema = Yup.object().shape({
 const Login = () => {
 
   const navigate = useNavigate();
+  const{setLoggedIn}=useAppContext();
 
   const loginForm = useFormik({
     initialValues: {

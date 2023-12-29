@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import useAppContext from '../../AppContext';
 
 const Navbar = ({cartItem}) => {
-  const [currentUser, setCurrentUser] = useState();
- 
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem('user'))
+  );
+ const {loggedIn,logout} =useAppContext();
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary ">
       <div className="container-fluid">
@@ -88,8 +91,8 @@ const Navbar = ({cartItem}) => {
           </ul>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
             {
-              currentUser != null ? (
-                <button className='btn btn-danger'> Logout</button>
+              loggedIn?(
+                <button className='btn btn-danger'onClick={logout}> Logout</button>
               ) :
                 (<>
                   <li className="nav-item">
