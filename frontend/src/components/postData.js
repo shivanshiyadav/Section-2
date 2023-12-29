@@ -1,6 +1,5 @@
 const postData = [
-    {  
-         author: "Raju Rastogi",
+    {   author: "Raju Rastogi",
         postedOn: new Date(),
         content: "Content of the post goes here...",
         image: 'https://www.hindustantimes.com/ht-img/img/2023/05/04/1600x900/world-password-day-best-memes-twitter-viral_1683195750349_1683195770274.jpg',
@@ -8,8 +7,7 @@ const postData = [
         comment: 20,
         share: 2
     },
-    {
-        author: "Ramu",
+    {   author: "Ramu",
         postedOn: new Date(),
         content: "Content of the post goes here...",
         image: '',
