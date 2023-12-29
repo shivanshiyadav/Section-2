@@ -20,6 +20,7 @@ import { SnackbarProvider } from 'notistack';
 // import UdateUser from './components/UpdateUser';
 import ManageUser from './components/ManageUser';
 import UpdateUser from './components/UpdateUser';
+import { AppProvider } from '../AppContext';
 
 
 const App = () => {
@@ -28,7 +29,8 @@ const App = () => {
       <SnackbarProvider anchorOrigin={{horizontal: 'right',vertical:'top'}}maxSnack={3}> 
       <Toaster position = 'top-center'/>
       <BrowserRouter>
-      <Nav_bar />
+      <AppProvider>
+      <Nav_bar cartItem={10} />
       
 
 <Routes>
@@ -52,6 +54,7 @@ const App = () => {
   
 </Routes>
    </BrowserRouter>
+   </AppProvider>
    </SnackbarProvider>
     </div>
   )

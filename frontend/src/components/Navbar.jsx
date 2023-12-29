@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({cartItem}) => {
   const [currentUser, setCurrentUser] = useState();
+ 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary ">
       <div className="container-fluid">
@@ -75,13 +76,14 @@ const Navbar = () => {
               </NavLink >
 
             </li>
+
             <li className="nav-item">
               <NavLink className="nav-link" to="/Manage">
                 ManageUser
               </NavLink >
 
             </li>
-
+            <h3>10</h3>
 
           </ul>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
