@@ -385,8 +385,11 @@ input {
 	margin: 8px 0;
 	width: 100%;
 }
+.log{
+	margin-top: 50px;
+}
 
-.container {
+.containe {
   margin-top: 30px;
 	background-color: #fff;
 	border-radius: 10px;
@@ -396,6 +399,7 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 560px;
+	margin-left: 380px ;
 }
 
 .form-container {
@@ -454,7 +458,11 @@ input {
 
 
 .social-container {
-	margin: 50px 0;
+	margin: 8px 0;
+
+}
+.logg{
+	margin-top: 30px;
 }
 
 .social-container a {

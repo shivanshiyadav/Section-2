@@ -75,10 +75,10 @@ const Login = () => {
   return (
 
 
-    <div class="container" id="container">
+    <div class="containe" id="containe">
       <div class="form-container log-in-container">
         <form onSubmit={loginForm.handleSubmit} action="#">
-          <h1>Login Now</h1>
+          <h1 className='log'>Login Now</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
             <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
@@ -95,12 +95,11 @@ const Login = () => {
             <span className='text-danger ms-3'>{loginForm.touched.password && loginForm.errors.password}</span>
             <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mb-4' style={{ borderWidth: '2px', borderColor: '#391b7f' }} />
 
-
+            <a  href="#" >Forgot your password?</a>
+          <button className='logg'>Log In</button>
           </form>
 
-          <a href="#">Forgot your password?</a>
-          <button>Log In</button>
-
+          
         </form>
         {/* <p className='fw-medium mb-5 mt-2'>New User ? <Link to={'/signup'} style={{color:'#391b7f'}}>Sign Up</Link></p> */}
 
