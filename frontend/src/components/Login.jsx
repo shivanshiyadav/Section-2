@@ -8,7 +8,7 @@ import * as Yup from 'yup';
 import useAppContext from '../../AppContext';
 
 const LoginSchema = Yup.object().shape({
-  
+
   email: Yup.string()
     .email('Invalid email')
     .required('Required'),
@@ -95,11 +95,6 @@ const Login = () => {
           <a href="#" >Forgot your password?</a>
           <button type='submit' className='logg'>Log In</button>
         </form>
-
-
-
-        {/* <p className='fw-medium mb-5 mt-2'>New User ? <Link to={'/signup'} style={{color:'#391b7f'}}>Sign Up</Link></p> */}
-
       </div>
       <div className="overlay-container">
         <div className="overlay">
