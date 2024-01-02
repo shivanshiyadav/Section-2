@@ -26,7 +26,7 @@ const UpdateUser = () => {
         console.log(values);
 
         //send req to backend/Rest API
-        const response = await fetch('http://localhost:5000/user/update/' + id, {
+        const response = await fetch('http://localhost:5000/users/update/' + id, {
             method: 'PUT',
             body: JSON.stringify(values),
             headers: {
