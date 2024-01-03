@@ -14,7 +14,7 @@ const Navbar = ({cartItem}) => {
           Navbar
         </a>
         <button
-          className="navbar-toggler"
+          c7lassName="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -110,7 +110,7 @@ const Navbar = ({cartItem}) => {
                 </>)
             }
           </ul>
-        </div>
+        </div>                                                                
       </div>
     </nav>
 

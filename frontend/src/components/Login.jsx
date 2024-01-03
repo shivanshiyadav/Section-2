@@ -80,18 +80,13 @@ const Login = () => {
             <a href="#" className="social"><i className="fa fa-facebook fa-2x"></i></a>
             <a href="#" className="social"><i className="fab fa fa-twitter fa-2x"></i></a>
           </div>
-          <span>or use your account</span>
-
-
-
+          <s pan>or use your account</s>
           <label className='fw-medium' htmlFor="email">Email Address</label>
           <span className='text-danger ms-3'>{loginForm.touched.email && loginForm.errors.email}</span>
           <input type="text" id='email' onChange={loginForm.handleChange} value={loginForm.values.email} className='form-control mb-4' style={{ borderWidth: '2px', borderColor: '#391b7f' }} />
-
           <label className='fw-medium' htmlFor="password">Password</label>
           <span className='text-danger ms-3'>{loginForm.touched.password && loginForm.errors.password}</span>
           <input type="password" id='password' onChange={loginForm.handleChange} value={loginForm.values.password} className='form-control mb-4' style={{ borderWidth: '2px', borderColor: '#391b7f' }} />
-
           <a href="#" >Forgot your password?</a>
           <button type='submit' className='logg'>Log In</button>
         </form>
